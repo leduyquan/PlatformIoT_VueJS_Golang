@@ -1,0 +1,70 @@
+.vehicle-report .vue-grid-item .widget-icon svg {
+    width: 48px;
+    height: 48px;
+}
+
+.cctv-frame {
+    position: relative;
+}
+.cctv-frame img {
+    width: 100%;
+}
+.cctv-frame .video-frame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+}
+.cctv-frame video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.recent-box {
+    background-color: #1a3045;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+}
+.recent-box .vehicle-item {
+    background-color: #324c67;
+    padding: 15px;
+    border-radius: 4px;
+}
+.recent-box .vehicle-item .thumb img {
+    height: 85px;
+}
+.recent-box .vehicle-item .vehicle-item-body {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    display: block !important;
+    height: 0px;
+    overflow: hidden;
+}
+.recent-box .vehicle-item .vehicle-item-body.show {
+    height: auto;
+}
+.recent-box .vehicle-item .collapsed .fa-caret-down {
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.bg-box {
+    background-color: #1a3045;
+    padding: 15px;
+    border-radius: 4px;
+    -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    height: 100%;
+}

@@ -1,0 +1,336 @@
+// --------------------------------------------------
+// Flexbox SASS mixins
+// The spec: http://www.w3.org/TR/css3-flexbox
+// --------------------------------------------------
+@mixin linear-gradient($start-color, $end-color, $orientation)
+{
+  background: $start-color;
+  @if $orientation == vertical
+  {
+    // vertical
+    background: -moz-linear-gradient(top,  $start-color 0%, $end-color 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start-color), color-stop(100%,$end-color));
+    background: -webkit-linear-gradient(top,  $start-color 0%,$end-color 100%);
+    background: -o-linear-gradient(top,  $start-color 0%,$end-color 100%);
+    background: -ms-linear-gradient(top,  $start-color 0%,$end-color 100%);
+    background: linear-gradient(to bottom,  $start-color 0%,$end-color 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=0 );
+  }
+  @else if $orientation == horizontal
+  {
+    // horizontal
+    background: -moz-linear-gradient(left,  $start-color 0%, $end-color 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,$start-color), color-stop(100%,$end-color));
+    background: -webkit-linear-gradient(left,  $start-color 0%,$end-color 100%);
+    background: -o-linear-gradient(left,  $start-color 0%,$end-color 100%);
+    background: -ms-linear-gradient(left,  $start-color 0%,$end-color 100%);
+    background: linear-gradient(to right,  $start-color 0%,$end-color 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
+  }
+  @else
+  {
+    // radial
+    background: -moz-radial-gradient(center, ellipse cover,  $start-color 0%, $end-color 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$start-color), color-stop(100%,$end-color));
+    background: -webkit-radial-gradient(center, ellipse cover,  $start-color 0%,$end-color 100%);
+    background: -o-radial-gradient(center, ellipse cover,  $start-color 0%,$end-color 100%);
+    background: -ms-radial-gradient(center, ellipse cover,  $start-color 0%,$end-color 100%);
+    background: radial-gradient(ellipse at center,  $start-color 0%,$end-color 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
+  }
+}
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+@mixin transform-origin ($origin) {
+  moz-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+  transform-origin: $origin;
+}
+@mixin transition ($transition) {
+  -webkit-transition: $transition;
+  -moz-transition:    $transition;
+  -ms-transition:     $transition;
+  -o-transition:      $transition;
+}
+@mixin keyframe ($animation_name) {
+  @-webkit-keyframes #{$animation_name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animation_name} {
+    @content;
+  }
+
+  @-o-keyframes #{$animation_name} {
+    @content;
+  }
+
+  @keyframes #{$animation_name} {
+    @content;
+  }
+}
+@mixin animation ($animation, $duration, $transition, $iteration){
+  -webkit-animation-name: $animation;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-timing-function: $transition;
+  -webkit-animation-iteration-count: $iteration;
+  -moz-animation-name: $animation;
+  -moz-animation-duration: $duration;
+  -moz-animation-timing-function: $transition;
+  -moz-animation-iteration-count: $iteration;
+  -o-animation-name: $animation;
+  -o-animation-duration: $duration;
+  -o-animation-timing-function: $transition;
+  -o-animation-iteration-count: $iteration;
+  animation-name: $animation;
+  animation-duration: $duration;
+  animation-timing-function: $transition;
+  animation-iteration-count: $iteration;
+}
+@mixin box-shadow($shadow, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $shadow;
+    -moz-box-shadow:inset $shadow;
+    box-shadow:inset $shadow;
+  } @else {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+  }
+}
+// Flexbox display
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// The 'flex' shorthand
+// - applies to: flex items
+// <positive-number>, initial, auto, or none
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex: $values;
+  -webkit-flex: $values;
+  -ms-flex: $values;
+  flex: $values;
+}
+
+// Flex Flow Direction
+// - applies to: flex containers
+// row | row-reverse | column | column-reverse
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+// Flex Line Wrapping
+// - applies to: flex containers
+// nowrap | wrap | wrap-reverse
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+  -moz-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+// Flex Direction and Wrap
+// - applies to: flex containers
+// <flex-direction> || <flex-wrap>
+@mixin flex-flow($flow) {
+  -webkit-flex-flow: $flow;
+  -moz-flex-flow: $flow;
+  -ms-flex-flow: $flow;
+  flex-flow: $flow;
+}
+
+// Display Order
+// - applies to: flex items
+// <integer>
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+// Flex grow factor
+// - applies to: flex items
+// <number>
+@mixin flex-grow($grow) {
+  -webkit-flex-grow: $grow;
+  -moz-flex-grow: $grow;
+  -ms-flex-grow: $grow;
+  flex-grow: $grow;
+}
+
+// Flex shrink
+// - applies to: flex item shrink factor
+// <number>
+@mixin flex-shrink($shrink) {
+  -webkit-flex-shrink: $shrink;
+  -moz-flex-shrink: $shrink;
+  -ms-flex-shrink: $shrink;
+  flex-shrink: $shrink;
+}
+
+// Flex basis
+// - the initial main size of the flex item
+// - applies to: flex itemsnitial main size of the flex item
+// <width>
+@mixin flex-basis($width) {
+  -webkit-flex-basis: $width;
+  -moz-flex-basis: $width;
+  -ms-flex-basis: $width;
+  flex-basis: $width;
+}
+
+// Axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | space-between | space-around
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+  -ms-flex-pack: $justify;
+}
+
+// Packing Flex Lines
+// - applies to: multi-line flex containers
+// flex-start | flex-end | center | space-between | space-around | stretch
+@mixin align-content($align) {
+  -webkit-align-content: $align;
+  -moz-align-content: $align;
+  -ms-align-content: $align;
+  align-content: $align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+  -moz-align-items: $align;
+  -ms-align-items: $align;
+  align-items: $align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex items
+// auto | flex-start | flex-end | center | baseline | stretch
+@mixin align-self($align) {
+  -webkit-align-self: $align;
+  -moz-align-self: $align;
+  -ms-align-self: $align;
+  align-self: $align;
+}
+@mixin clearfix(){
+  &:after,
+  &:before{
+    display: table;
+    content: '';
+    clear: both;
+  }
+}
+@mixin flex-width($width){
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 $width;
+  -ms-flex: 0 0 $width;
+  flex: 0 0 $width;
+  max-width: $width;
+  width: $width;
+}
+//common
+$phone-screen: "only screen and (max-width : 576px)";
+$sm-screen: "only screen and (min-width : 576px) and (max-width : 768px)";
+$md-screen: "only screen and (min-width : 768px) and (max-width : 992px)";
+$lg-screen: "only screen and (min-width : 992px)";
+$from-sm-screen:"only screen and (min-width : 576px)";
+$from-md-screen:"only screen and (min-width : 769px)";
+$from-lg-screen:"only screen and (min-width : 992px)";
+$from-xl-screen:"only screen and (min-width : 1200px)";
+$to-sm-screen:"only screen and (max-width : 576px)";
+$to-md-screen:"only screen and (max-width : 768px)";
+$to-lg-screen:"only screen and (max-width : 992px)";
+$to-xl-screen:"only screen and (max-width : 1200px)";
+$to-xxl-screen:"only screen and (max-width : 1360px)";
+$small-screen:"only screen and (max-width : 420px)";
+// Typography
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+$font-family-sans-serif: 'Poppins', sans-serif;
+$font-size-base: 12px;
+$font-size-base-number: 12;
+$line-height-base: 1.6;
+$text-color: #ffffff;
+//Humidity
+$white-color: #ffffff;
+$light-blue-color:#6bcdfd;
+$rubi-blue-color:#29cae7;
+$humid-blue-color: #23a3e6;
+$dark-blue-color: #187aae;
+//Temp, PM2.5
+$green-color:#1dae5f;
+$yellow-color:#e2ad0c;
+$light-yellow-color:#fcea00;
+$orange-color:#ff9d00;
+$dark-orange-color:#ff4d00;
+$red-color:#d5293c;
+$dark-red-color:#a50000;
+
+
+$green-logo:#55d335;
+$cyan-color:#15808a;
+$blue-color:#4e6de2;
+$thumbnail-border-color:#4e6de2;
+$el-table-row-color:#1a3045;
+$el-table-row-color-hover:#304c66;
+$blue-dark-color:#132739;
+
+$input-bg-color:#132739;
+$input-border-color:#313d4f;
+$input-focus-border-color:#4e6de2;
+$input-color:#a7abaf;
+$input-height:2.8rem;
+
+$box-bg-color:#1f3951;
+$box-border-color:#4aa0d5;
+$tab-active-color:#4e6de2;
+$tab-inactive-color:#d8d9de;
+$light-gray-color:#9d9da4;
+$dark-gray-color:#333333;
+@mixin box-shadow-style() {
+  @include box-shadow(0 0 10px rgba(0,0,0,0.3));
+  background-color: $box-bg-color;
+}
+$environment-color:#66b283;
+$environment-light-color:#ADD1BA;
+$emergency-color:#FF5122;
+$energy-color:#6d5bec;
+$energy-light-color:#A79DF4;
+$occupancy-color:#be68a9;
+$occupancy-light-color:#ef9bec;
+$access-ms-color:#BE67A9;
+$room-color:#ff9c03;
+$room-light-color:#FFC485;
+$safety-color:#D72638;
+$safety-light-color:#FFC485;
+$security-color:#00bff3;
+$security-light-color:#FFC485;
+$illumination-color:#f9cd16;
+$illumination-light-color:#ADD1BA;
+$tracking-color:#196B93;
+$tracking-light-color:#ADD1BA;
+$nav-sidebar-width:200px;

@@ -1,0 +1,138 @@
+@import "variables";
+.time-line{
+  position: relative;
+  width: 100%;
+  .label{
+    white-space: nowrap;
+    transform: translateY(-27px);
+    position: absolute;
+    left: -28px;
+  }
+  .circle{
+    width: 18px;
+    height: 18px;
+    padding: 2px;
+    border-radius: 50%;
+    border: solid 1px #ffffff;
+    .dot{
+      width: 12px;
+      height: 12px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      &:before{
+        content: '';
+        position: relative;
+        height: 20px;
+        width: 1px;
+        background-color: #ffffff;
+        display: inline-block;
+        @include transform(translate(-0.5px,-23px));
+      }
+    }
+  }
+  .growth-bar-wrapper{
+    position: absolute;
+    z-index: 4;
+    bottom: 25px;
+  }
+  .growth-bar{
+    > div{
+      height: 8px;
+      line-height: 1px;
+      &.start-time{
+        position: absolute;
+        left: -8px;
+        top: -5px;
+      }
+      &.current-time{
+        position: absolute;
+        top: -5px;
+        .label{
+          white-space: nowrap;
+          transform: translateY(-14px);
+          position: absolute;
+          left: 0;
+        }
+        .circle{
+          .dot{
+            &:before{
+              content: '';
+              position: relative;
+              height: 8px;
+              width: 1px;
+              background-color: #ffffff;
+              display: inline-block;
+              @include transform(translate(-0.5px,-10px));
+            }
+          }
+        }
+      }
+      &.end-time{
+        position: absolute;
+        right: -8px;
+        top: -5px;
+        .label{
+          white-space: nowrap;
+          transform: translateY(-27px);
+          position: absolute;
+          left: auto;
+          right: -30px;
+        }
+      }
+    }
+  }
+  .time-ticks{
+    position: relative;
+    border-bottom: solid 1px #304557;
+    height: 70px;
+    width: 100%;
+    > div{
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      z-index: 1;
+      span{
+        position: absolute;
+        bottom: 0;
+        display: inline-block;
+        &.text{
+          bottom: -20px;
+          left: -20px;
+          white-space: nowrap;
+          color: #a4a9af;
+          font-size: 11px;
+          text-transform: uppercase;
+        }
+        &.line{
+          width: 1px;
+          height: 20%;
+          background-color:#304557;
+        }
+        &.dot{
+          width: 4px;
+          height: 4px;
+          border-radius: 3px;
+          background-color: #cccccc;
+          left: -1.5px;
+          z-index: 2;
+          bottom: -2px;
+          visibility: hidden;
+        }
+      }
+      &.last{
+        .text{
+          left: auto;
+          right: -20px;
+        }
+      }
+      &.high{
+        .line{
+          height: 100%;
+        }
+        .dot{
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

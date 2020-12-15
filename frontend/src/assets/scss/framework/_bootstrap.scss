@@ -1,0 +1,83 @@
+// Bootstrap
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1360px
+) !default;
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1300px
+) !default;
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66D9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+$gray-base: #000 !default;
+$white: #fff !default;
+$gray-50: #ebebeb !default;
+$gray-100: #d8dde7 !default;
+$gray-200: lighten($gray-base, 62.75%) !default; // #aaa
+$gray-300: lighten($gray-base, 56.5%) !default; // #999
+$gray-400: lighten($gray-base, 50%) !default; // #888
+$gray-500: lighten($gray-base, 43.75%) !default; // #777
+$gray-600: lighten($gray-base, 37.5%) !default; // #666
+$gray-650: lighten($gray-base, 33.3%) !default; // ##555555
+$gray-700: lighten($gray-base, 31.25%) !default; // #555
+$gray-800: lighten($gray-base, 25%) !default; // #444
+$gray-900: lighten($gray-base, 18.75%) !default; // #333
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$default:     $gray-300 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+$theme-colors: () !default;
+$theme-colors: map-merge(
+                (
+                        "primary":    $primary,
+                        "secondary":  $secondary,
+                        "default":  $default,
+                        "success":    $success,
+                        "info":       $info,
+                        "warning":    $warning,
+                        "danger":     $danger,
+                        "light":      $light,
+                        "dark":       $dark
+                ),
+                $theme-colors
+);
+@import '../../../../node_modules/bootstrap/scss/bootstrap';
+
+@mixin make-grid-columns-percentage($breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      @for $i from 1 through 20 {
+        .col#{$infix}-#{$i*5}p {
+          flex: 0 0 percentage($i/20);
+          max-width: percentage($i/20);
+        }
+      }
+    }
+  }
+}
+@include make-grid-columns-percentage();
+
+@import '../../../../node_modules/toastr/toastr.scss';
+

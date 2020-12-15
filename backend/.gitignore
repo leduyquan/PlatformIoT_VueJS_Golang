@@ -1,0 +1,8 @@
+.env
+.vscode
+config.json
+go.sum
+vendor
+tmp
+plop.lock
+air

@@ -1,0 +1,7 @@
+<svg enable-background="new 0 0 646.3 646.3" version="1.1" viewBox="0 0 646.3 646.3" xmlns="http://www.w3.org/2000/svg" class="direction-cctv-marker-svg">
+   <linearGradient id="SVGID_1_" x1="483.31" x2="323.02" y1="483.46" y2="323.17" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#00BFF2" stop-opacity="0" offset="0"/>
+   <stop stop-color="#00BFF2" stop-opacity=".8" offset="1"/>
+   </linearGradient>
+   <polygon class="direction" points="642.9 322.9 323.2 323 323.2 643.5" fill="url(#SVGID_1_)"/>
+</svg>

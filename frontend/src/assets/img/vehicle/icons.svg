@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol viewBox="0 0 90.7 65" id="Add_Single_Vehicle">
+        <path fill="none" stroke="#4E6DE2" stroke-miterlimit="10" d="M13.7,37.3c-2.6,0-4.6-2.1-4.6-4.6c0-2.6,2-4.6,4.6-4.6c2.5,0,4.6,2,4.6,4.6C18.3,35.2,16.2,37.3,13.7,37.3z"/>
+        <path fill="none" stroke="#4E6DE2" stroke-miterlimit="10" d="M46.1,36.4H26.8c-1.1,0-2.1-1-2.1-2.1c0-1.2,1-2.2,2.1-2.2h19.3c1.2,0,2.1,1,2.1,2.2
+	C48.2,35.4,47.3,36.4,46.1,36.4z"/>
+        <path fill="none" stroke="#4E6DE2" stroke-miterlimit="10" d="M12.4,19c1.5-3.2,2.8-6.5,4.7-10.1c1-1.7,2.1-3.3,4.1-3.5h30.7c2,0.2,3.1,1.7,4.1,3.5c1.8,3.6,3.2,6.9,4.7,10.1
+	H12.4z"/>
+        <path fill="none" stroke="#4E6DE2" stroke-miterlimit="10" d="M74.3,56.9c0,3.4-5.1,3.4-5.1,0l0-8.2H61c-3.4,0-3.4-5.1,0-5.1h8.3l0-8.2c0-3.4,5.1-3.4,5.1,0l0,8.2h8.3
+	c3.4,0,3.4,5.1,0,5.1h-8.2L74.3,56.9z"/>
+        <path fill="none" stroke="#4E6DE2" stroke-miterlimit="10" d="M63.7,30.1C63.7,30.1,63.7,30.1,63.7,30.1c-1.8,0.8-3.4,1.9-4.9,3.4c-0.8,0.8-1.5,1.6-2.1,2.5
+	c0.1,0.1,0.1,0.1,0.2,0.2c0.6-0.9,1.3-1.8,2.2-2.6C60.5,32.1,62.1,31,63.7,30.1z"/>
+        <path fill="none" stroke="#4E6DE2" stroke-miterlimit="10" d="M55.4,32.7c0-2.6,2-4.6,4.6-4.6c1.5,0,2.9,0.8,3.7,1.9c1.9-0.9,3.9-1.5,5.9-1.7c0-0.2,0-0.5,0-0.7l-2.5-5.9
+	c7.4-0.2,5.3-5.8,4.3-5.8h-6.9L59.9,5.5c-2.7-3.8-4.7-5-8-5H21.1c-3.3,0-5.3,1.2-8,5L8.5,15.8H1.6c-1.1,0-3.1,5.7,4.2,5.8l-2.5,5.9
+	c0.1,7.6,0.1,15,0.1,22.5c0,1.6,1.3,2.8,2.8,2.8h9.5c1.6,0,2.7-1.3,2.7-2.8v-6.2h35.2c0.4-2.8,1.4-5.5,3.1-7.9
+	C55.9,35.1,55.4,34,55.4,32.7z"/>
+        <path fill="none" stroke="#4E6DE2" stroke-miterlimit="10" d="M84.9,33.5c-7.1-7.1-18.6-7.1-25.7,0c-7.1,7.1-7.1,18.6,0,25.7c7.1,7.1,18.6,7.1,25.7,0S92,40.5,84.9,33.5z"/>
+    </symbol>
+    <symbol viewBox="0 0 73.8 85.7" id="Upload_CSV">
+        <line fill="none" stroke="#A5CDE3" stroke-miterlimit="10" x1="8.8" y1="24.5" x2="48.2" y2="24.5"/>
+        <line fill="none" stroke="#A5CDE3" stroke-miterlimit="10" x1="8.8" y1="29.8" x2="48.2" y2="29.8"/>
+        <line fill="none" stroke="#A5CDE3" stroke-miterlimit="10" x1="8.8" y1="34.8" x2="48.2" y2="34.8"/>
+        <line fill="none" stroke="#A5CDE3" stroke-miterlimit="10" x1="8.8" y1="40.2" x2="48.2" y2="40.2"/>
+        <line fill="none" stroke="#A5CDE3" stroke-miterlimit="10" x1="8.8" y1="45.9" x2="30.4" y2="45.9"/>
+        <path fill="none" stroke="#A5CDE3" stroke-miterlimit="10" d="M42.1,54c4.1-4.1,9.7-5.8,15-5.2V17.5H43.8c-2,0-3.6-1.6-3.6-3.6V0.7H3.2c-1.5,0-2.7,1.2-2.7,2.7v69.9
+	c0,1.5,1.2,2.7,2.7,2.7h36C35.2,68.9,36.2,59.9,42.1,54z"/>
+        <path fill="none" stroke="#A5CDE3" stroke-miterlimit="10" d="M57.7,77.6c0,3.4-5.1,3.4-5.1,0l0-8.3h-8.2c-3.4,0-3.4-5.1,0-5.1h8.3l0-8.3c0-3.4,5.1-3.4,5.2,0l0,8.3H66
+	c3.4,0,3.4,5.1,0,5.1h-8.2L57.7,77.6z"/>
+        <path fill="none" stroke="#A5CDE3" stroke-miterlimit="10" d="M68,54c-7.2-7.2-18.7-7.2-25.8,0c-7.2,7.1-7.2,18.7,0,25.8c7.1,7.2,18.7,7.2,25.8,0S75.1,61.1,68,54z"/>
+        <line fill="none" stroke="#A5CDE3" stroke-miterlimit="10" x1="40.6" y1="0.4" x2="57.5" y2="17.2"/>
+    </symbol>
+    <symbol viewBox="0 0 92.2 100.9" id="Upload_CSV_and_Overwrite">
+        <line fill="none" stroke="#AA1C22" stroke-miterlimit="10" x1="8.7" y1="40.1" x2="47.9" y2="40.1"/>
+        <line fill="none" stroke="#AA1C22" stroke-miterlimit="10" x1="8.7" y1="45.3" x2="47.9" y2="45.3"/>
+        <line fill="none" stroke="#AA1C22" stroke-miterlimit="10" x1="8.7" y1="50.3" x2="47.9" y2="50.3"/>
+        <line fill="none" stroke="#AA1C22" stroke-miterlimit="10" x1="8.7" y1="55.6" x2="47.9" y2="55.6"/>
+        <line fill="none" stroke="#AA1C22" stroke-miterlimit="10" x1="8.7" y1="61.4" x2="30.2" y2="61.4"/>
+        <path fill="none" stroke="#AA1C22" stroke-miterlimit="10" d="M41.9,69.4c4.1-4.1,9.6-5.8,14.9-5.2V33.1H43.6c-1.9,0-3.5-1.6-3.5-3.5V16.4H3.1c-1.5,0-2.6,1.2-2.6,2.6v69.4
+	c0,1.5,1.2,2.6,2.6,2.6h35.8C35,84.2,36,75.3,41.9,69.4z"/>
+        <line fill="none" stroke="#AA1C22" stroke-miterlimit="10" x1="61.7" y1="21.9" x2="83.7" y2="21.9"/>
+        <line fill="none" stroke="#AA1C22" stroke-miterlimit="10" x1="61.7" y1="25.6" x2="83.7" y2="25.6"/>
+        <line fill="none" stroke="#AA1C22" stroke-miterlimit="10" x1="61.7" y1="29.1" x2="83.7" y2="29.1"/>
+        <line fill="none" stroke="#AA1C22" stroke-miterlimit="10" x1="61.7" y1="32.9" x2="83.7" y2="32.9"/>
+        <line fill="none" stroke="#AA1C22" stroke-miterlimit="10" x1="61.7" y1="36.9" x2="75.5" y2="36.9"/>
+        <line fill="none" stroke="#AA1C22" stroke-miterlimit="10" x1="56.5" y1="52.1" x2="78.3" y2="52.1"/>
+        <path fill="none" stroke="#AA1C22" stroke-miterlimit="10" d="M91.6,33V16.2h-7c-1.4,0-2.5-1.1-2.5-2.5V4.4H56.4c-1,0-1.9,0.8-1.9,1.9v24.1"/>
+        <path fill="none" stroke="#AA1C22" stroke-miterlimit="10" d="M91.6,32.6v17.6c0,1-0.8,1.9-1.9,1.9H77.6"/>
+        <path fill="none" stroke="#AA1C22" stroke-miterlimit="10" d="M57.3,92.8c0,3.4-5.1,3.4-5.1,0l0-8.2H44c-3.4,0-3.4-5.1,0-5.1h8.3l0-8.2c0-3.4,5.1-3.4,5.1,0l0,8.2h8.3
+	c3.4,0,3.4,5.1,0,5.1h-8.2L57.3,92.8z"/>
+        <path fill="none" stroke="#AA1C22" stroke-miterlimit="10" d="M67.5,69.4c-7.1-7.1-18.6-7.1-25.7,0c-7.1,7.1-7.1,18.6,0,25.7c7.1,7.1,18.6,7.1,25.7,0S74.7,76.5,67.5,69.4z"
+        />
+        <path fill="#AA1C22" d="M45.3,0l5.8,4.7l-5.8,4.7V6.1c-3.2,0-5.8,2.6-5.8,5.8v0.6h-2.9v-0.6c0-4.8,3.9-8.7,8.7-8.7V0z"/>
+        <line fill="none" stroke="#AA1C22" stroke-miterlimit="10" x1="40.1" y1="16.1" x2="56.9" y2="32.8"/>
+        <line fill="none" stroke="#AA1C22" stroke-miterlimit="10" x1="82.3" y1="4.2" x2="91.8" y2="16"/>
+    </symbol>
+</svg>

@@ -1,0 +1,224 @@
+@import "variables";
+
+.vue-grid-layout{
+  margin: 0 -30px;
+}
+.vue-grid-item{
+  background-color: #1a3045;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+}
+//store-count-widget-----------------------------
+.apexcharts-canvas{
+  width: 100%!important;
+  svg{
+    width: 100%!important;
+  }
+}
+.apexcharts-tooltip{
+  color: #000000;
+  padding: 10px;
+  .line-area{
+    height: 5px;
+    width: 30px;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+  }
+  .line-line{
+    height: 5px;
+    width: 30px;
+    border-bottom-style: dotted;
+    border-bottom-width: 2px;
+  }
+  .change{
+    span{
+      position: relative;
+      display: inline-block;
+      &:before{
+        visibility: hidden;
+        position: absolute;
+        display: table;
+        content: '';
+        top: 4px;
+        right: -15px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 8px solid #4d6de4;
+      }
+      &:after{
+        visibility: hidden;
+        position: absolute;
+        display: table;
+        content: '';
+        bottom: 4px;
+        right: -15px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 8px solid #4d6de4;
+      }
+      &.up{
+        &:before{
+          visibility: visible;
+        }
+      }
+      &.down{
+        &:after{
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+.widget-element{
+  height: 100%;
+  width: 100%;
+  .widget-element-content{
+    height: 100%;
+    width: 100%;
+    &.flex-box{
+      @include flexbox();
+      flex: 1;
+    }
+    &.height-auto{
+      height: auto;
+    }
+  }
+}
+.widget-content{
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  .widget-value{
+    @include flexbox();
+    .unit{
+      @include flexbox();
+      @include flex-direction(column);
+      @include justify-content(space-between);
+      .top{
+        @include align-self(flex-start)
+      }
+      .bottom{
+        @include align-self(flex-end)
+      }
+    }
+  }
+  .widget-last-value{
+    @include flexbox();
+    @include flex-wrap(nowrap);
+    > div{
+
+    }
+    .line{
+      height: 2px;
+      width: 30px;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+    }
+    .dash-line{
+      height: 5px;
+      width: 30px;
+      border-bottom-style: dotted;
+      border-bottom-width: 2px;
+    }
+    .sep-line{
+      margin: 0 10px;
+      border-left: solid 1px #32465b;
+    }
+    .change{
+      span{
+        position: relative;
+        display: inline-block;
+        &:before{
+          visibility: hidden;
+          position: absolute;
+          display: table;
+          content: '';
+          top: 4px;
+          right: -15px;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 8px solid #4d6de4;
+        }
+        &:after{
+          visibility: hidden;
+          position: absolute;
+          display: table;
+          content: '';
+          bottom: 4px;
+          right: -15px;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 8px solid #4d6de4;
+        }
+        &.up{
+          &:before{
+            visibility: visible;
+          }
+        }
+        &.down{
+          &:after{
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+}
+//----------------------------------------------
+//customer-demographics-widget------------------
+.customer-demographics-widget{
+  .flex-box-item{
+    @include flexbox();
+    padding: 0 5px;
+    svg{
+      stroke:#4E6DE2
+    }
+  }
+  .border-right-blue{
+    border-right: solid 1px $box-border-color;
+  }
+}
+//----------------------------------------------
+// historical-widget------------------
+.historical-widget{
+  .historical-data{
+    background-color: #1a3045;
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+    .col-left{
+      @include linear-gradient(#13293b, #1b374e, 'horizontal')
+    }
+    .col-right{
+      box-shadow: inset 15px 0 10px rgba(0,0,0,0.1);
+    }
+    .option-show-layout{
+      .el-radio-button--mini{
+        .el-radio-button__inner{
+          padding: 5px 7px;
+        }
+      }
+    }
+  }
+}
+//----------------------------------------------
+#donut-chart-outer{
+  position: relative;
+  .legend-overlay{
+    position: absolute;
+    width: 22%;
+    text-align: center;
+    font-size: 18px;
+  }
+  .apexcharts-canvas svg{
+    width: 100%;
+  }
+}

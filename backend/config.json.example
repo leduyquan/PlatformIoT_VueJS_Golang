@@ -1,0 +1,94 @@
+{
+    "log": [
+        {
+            "syncer": "std",
+            "level": "debug"
+        },
+        {
+            "syncer": "file",
+            "level": "debug",
+            "file_name": "log/all.log",
+            "max_size": 1,
+            "max_age": 1,
+            "max_backups": 7
+        },
+        {
+            "syncer": "file",
+            "level": "error",
+            "file_name": "log/err.log",
+            "max_size": 1,
+            "max_age": 1,
+            "max_backups": 7
+        }
+    ],
+    "server": {
+        "host": "localhost",
+        "port": 9099,
+        "default_path": "/"
+    },
+    "database": {
+        "host": "localhost",
+        "port": 27018,
+        "database": "lpr_agent",
+        "user": "",
+        "password": ""
+    },
+    "cloud": {
+        "host": "http://staging.buildos.io",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQwM2M4ZDljOTZjYjk1NWNkNTg0NjFlOGVhYjVjNzZkMGJkOWJjOWVkY2MzZDM0NjQ5ZWM0OTYwZGVmMDBjYzNjNzBmYjgzMGU5OGJlOGY4In0.eyJhdWQiOiI1ZTk5Mzg0MGVlNzA2MjZjMDQzZDUwNDQiLCJqdGkiOiI0MDNjOGQ5Yzk2Y2I5NTVjZDU4NDYxZThlYWI1Yzc2ZDBiZDliYzllZGNjM2QzNDY0OWVjNDk2MGRlZjAwY2MzYzcwZmI4MzBlOThiZThmOCIsImlhdCI6MTU4NzA5OTc5NCwibmJmIjoxNTg3MDk5Nzk0LCJleHAiOjE2MTg2MzU3OTQsInN1YiI6IjVlNzJlMTQ4NDRhYzRiMjg3ODQ2MTM2MiIsInNjb3BlcyI6WyIqIl19.gqOeuLgOSg8GvLK84n18EGNPmjvRcWc6dMCtnk11WOrJ8KxBKmP-vpkntCtW2Smqejbesb_P8W6l4l-Q-4BpNjNdfT3sr3LENur_hK9FcKcK-GfpDg_mBlX8xoLEjPa4N4xW5mNpU6IibDM3Ae1um0QWcaF_5SQudiIvL5KNHBexgUZYYcP_viIXJvwGz89qhDltvRwNXgsJZcYE8aoPIiJ9vJqzPJuja3vN2JZIYAVQkH1tfN5YOERVBwLD1mEZX3j66A_WYr-gKrHL_NUky0uRY-g7uED7uHPveSj5ZbcPSXvvDE7SP6mhonlgS2XnnBhaCpRRZ-XaJhy03N_SFaQrySLcui0RaDayNW9dR5mc_o06xak3s7YELd7A5sWM08QfeTiqi3-MOJVxcppzLSgqYPn-_gjnJZlfTKMDcTt7W5Uq07-N_Qne7aOXJZ7ZpEhdd6LgfkwXjnt-KgqxNSr3E-QF2FHNoF3b1XRKkYzUSsiJb4JCVwYEzD19pv22vFY_xQX689r9bolsAyFavQE7uJzGalQBVweO9zcH0r5aRw4cXs1vF7XsTK_lcT5oDEXBD-H9R1QjOXWtRRpzlHQcUOeZW2jmAwSTZ5h4uWaM-E13YLl61BUMqtT4X2yHgVM-3sGO6NIjz8-r6maayzZAD-oyHDXF2AM4g8Wk40I"
+    },
+    "agent": {
+        "config_path": "<Path to Services configuration>/config.json",
+        "camera_dir": "<Path to OpenALPR Agent installation. Eg: C:\\OpenALPR\\Agent>",
+        "topic_stream": "brazn.topic.websocket",
+        "timer": 900
+    },
+    "sdm": {
+        "config_dir": "<Path to SDM camera installation. Eg: /opt/sdm/",
+        "services": {
+            "broker": {
+                "host": "localhost",
+                "port": "4222",
+                "cmd_status": "nc -vz %host %port",
+                "cmd_restart": "docker restart nats-server"
+            },
+            "client": {
+                "host": "localhost",
+                "port": "5120",
+                "cmd_status": "nc -vz %host %port",
+                "cmd_restart": "docker restart sdm-cli"
+            },
+            "detection_0": {
+                "host": "localhost",
+                "port": "6120",
+                "cmd_status": "nc -vz %host %port",
+                "cmd_restart": "docker restart sdm-0"
+            },
+            "detection_1": {
+                "host": "localhost",
+                "port": "6121",
+                "cmd_status": "nc -vz %host %port",
+                "cmd_restart": "docker restart sdm-1"
+            },
+            "detection_2": {
+                "host": "localhost",
+                "port": "6122",
+                "cmd_status": "nc -vz %host %port",
+                "cmd_restart": "docker restart sdm-2"
+            },
+            "detection_3": {
+                "host": "localhost",
+                "port": "6123",
+                "cmd_status": "nc -vz %host %port",
+                "cmd_restart": "docker restart sdm-3"
+            }
+        }
+    },
+    "alpr": {
+        "config_dir": "./test_resource/alpr",
+        "camera_resolution": {
+            "width": 480,
+            "height": 360
+        }
+    }
+}

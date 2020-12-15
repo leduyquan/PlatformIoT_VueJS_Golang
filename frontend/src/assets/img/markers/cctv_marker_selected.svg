@@ -1,0 +1,7 @@
+<svg enable-background="new 0 0 165 165" version="1.1" viewBox="0 0 165 165" xmlns="http://www.w3.org/2000/svg">
+ <g id="Layer_1_copy">
+  <circle opacity=".4"  class="selected-circle-outer" stroke-width="36" stroke-miterlimit="10" cx="82.5" cy="82.5" r="62.7"/>
+ </g>
+ <circle class="selected-circle" stroke-width="8" stroke-miterlimit="10" cx="82.5" cy="82.5" r="62.7"/>
+ <path class="fill-stroke-color" d="m118.1 84.3v6.6h-3.1v4.9h-19.5c-0.5-2.2-2.5-3.9-4.9-3.9-0.3 0-0.5 0-0.8 0.1l-5.2-9.3 21.6-10.8 1.5-7-6.7-13.5-62 30.9 19.9 13.2 22.5-11.2 5.3 9.4c-0.7 0.9-1.2 2-1.2 3.2 0 2.8 2.3 5.1 5.1 5.1 1.9 0 3.6-1.1 4.5-2.7h19.9v4.9h3.1v6.6h3.3v-26.5h-3.3zm-20.4-26.7c1.4 0 2.5 1.1 2.5 2.5s-1.1 2.5-2.5 2.5-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5z"/>
+</svg>
